@@ -18,6 +18,8 @@ function RealtimeServer(spacecraft) {
 
         function notifySubscribers(point) {
             if (subscribed[point.id]) {
+                // realtime data
+                // console.log(JSON.stringify(point.timestamp));
                 ws.send(JSON.stringify(point));
             }
         }
